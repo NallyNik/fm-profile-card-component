@@ -7,9 +7,10 @@
 }
 h1 {
     font-size: 18px;
+    color: hsl(229, 23%, 23%);
 }
 p, span {
-    font-size: smaller;
+    font-size: 1rem;
     color:  hsl(0, 0%, 59%);
 }
 body {
@@ -18,15 +19,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: hsl(185, 75%, 39%);
+    background: url('../images/bg-pattern-top.svg') -750px -600px no-repeat,
+                url('../images/bg-pattern-bottom.svg') 100px 350px no-repeat,
+                hsl(185, 75%, 39%);
 }
 main {
     width: 20rem;
-    height: 24rem;
+    height: 23rem;
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow: 0 8px 50px -5px hsl(227, 10%, 46%);
 }
+.main__header {
+    width: 100%;
+    height: 8rem;
+    background-image: url('../images/bg-pattern-card.svg');
+}
+
 /*1st section*/
 .main__profile {
     padding: 1.5rem;
@@ -37,13 +47,10 @@ main {
     gap: 0.8rem;
     border-bottom: 1px solid hsl(0, 0%, 59%);
 }
-.profile__header {
-    height: 5rem;
-    background-image: url('../images/bg-pattern-card.svg');
-}
 .profile__figure img{
-    border-radius: 3rem;
-    border: 2px solid white;
+    margin-top: -5rem;
+    border-radius: 50%;
+    border: 5px solid white;
 }
 .profile__name span {
     font-weight: lighter;
@@ -56,38 +63,35 @@ main {
     justify-content: space-around;
     text-align: center;
 }
-.status__number {
-
-}
 .status__text {
-
+    font-size: small;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+}
 .attribution { 
+    margin-top: 1rem;
+    color: black;
     font-size: 11px;
     text-align: center;
+    white-space: pre;
 }
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+    color: white;
+}
+.attribution a:hover {
+    color: black;
+    font-weight: 700;
+}
+
+@media (min-width:800px) {
+    body {
+        background: url('../images/bg-pattern-top.svg') -250px -600px no-repeat,
+                url('../images/bg-pattern-bottom.svg') 650px 325px no-repeat,
+                hsl(185, 75%, 39%);
+    }
 }
